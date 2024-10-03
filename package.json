@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
     "migrate:create": "npm run knex -- migrate:make --migrations-directory ./src/db/migrations -x ts",
     "dev": "tsx watch src/server.ts",
@@ -23,8 +23,11 @@
   },
   "devDependencies": {
     "@types/node": "^22.7.3",
+    "@types/supertest": "^6.0.2",
     "eslint": "^8.57.1",
+    "supertest": "^7.0.0",
     "tsx": "^4.19.1",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.2"
   }
 }
